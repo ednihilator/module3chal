@@ -1,12 +1,72 @@
+*{
+  --maindarkgray: color: rgb(80, 80, 80);
+  --mainlightgray: rgb(200, 200, 200);
+}
 body{
-  font-size: 50px;
+  background-color: rgb(233, 233, 233);
+  justify-content: center;
 }
+
 h1{
-  font-size: 20px;
+  font-size: 35px;
   font-family: Arial, Helvetica, sans-serif;
-  color:black;
+  color:var(--maindarkgray);
   text-align: center;
+  border-bottom: 2px, solid, black;
+  
 }
-p{
-  font-size:50px;
+
+/*contains the 'Generate a Password' text and the white box*/
+main{
+  position:relative;
+  align-items: center;
+  font-family:Arial, Helvetica, sans-serif;
+  align-self: center;
+  justify-content: center;
+  font-size: 26px;
+  font-weight: bold;
+  color: var(--maindarkgray);
+  background-color: white;
+  height: 400px;
+  width: 600px;
+  padding-left: 60px;
+  padding-top: 20px;
+  margin: 15px;
+  box-shadow: 10px 10px 10px var(--mainlightgray);
+}
+
+/*contains the 'Your Secure Password' text and the dashed bordered box*/
+.display{
+  height: 100px;
+  width:350px;
+  text-align: center;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color:var(--maindarkgray);
+  font-size: 20px;
+  border-style: dashed;
+  border-width: 2px;
+  padding: 5px;
+  border-color: lightgray;
+}
+
+/*this is the 'Generate Password' button*/
+.button{
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(180, 0, 0);
+  border-radius: 35px;
+  padding: 15px;
+  margin: 30px;
+  width: 250px;
+  transition: 0.25s;
+}
+
+.button:hover{
+  cursor: grab;
+  box-shadow: 5px 5px 5px var(--mainlightgray);
+}
+.button:active{
+  color:black;
 }
