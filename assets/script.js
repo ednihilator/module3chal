@@ -17,7 +17,7 @@ function newRandom(){
   numIndex = Math.floor(Math.random() * numList.length);
   specialCharIndex = Math.floor(Math.random() * specList.length);
 }
-
+//this is the function that prompts users about their password length/character types, then returns a password
 function genPass(){
   charNum = prompt("How long do you want your password to be? 8-24 characters");
   includeUpperChar=confirm("Would you like uppercase letters?");
@@ -49,9 +49,14 @@ function genPass(){
       x++;
      }
   }
+
+  var passwordText = document.querySelector("#password");
+  passwordText.value = "Your Secure Password is \n"+password;
+  
+  
   console.log("password is "+ password);
 }
-
+//this function resets the password to an empty string so you can hit the 'generate button' repeatedly without adding to previous a previous password
   function resetPass(){
     password='';
     console.log("password is "+ password +" after password reset");
@@ -59,8 +64,5 @@ function genPass(){
   
   
 
-  //var passwordTextArea = document.querySelector("#password");
-
-//passwordTextArea.value = password;  // password is a string for your password
 
 

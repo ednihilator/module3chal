@@ -4,21 +4,29 @@
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="./assets/style.css">
     <script src="./assets/script.js"></script>
+    
   </head>
 
   <body>
     <h1>
       Password Generator
     </h1>
-    <main>
+    <div class="card">
       <p>
         Generate a Password
       </p>
       <div class="display">
-        Your Secure Password
+        <textarea
+            readonly
+            id="password"
+            placeholder="Your Secure Password"
+            passwordText="Generate Password"
+          ></textarea>
       </div>
+
       <div class="button" onclick="resetPass(),genPass()">Generate Password</div>
-    </main>
+
+    </div>
   
 
   </body>

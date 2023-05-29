@@ -5,6 +5,8 @@
 body{
   background-color: rgb(233, 233, 233);
   justify-content: center;
+  margin: 0;
+  padding: 0;
 }
 
 h1{
@@ -17,52 +19,41 @@ h1{
 }
 
 /*contains the 'Generate a Password' text and the white box*/
-main{
+.card{
   position:relative;
   align-items: center;
   font-family:Arial, Helvetica, sans-serif;
-  align-self: center;
-  justify-content: center;
+  /* align-self: center;
+  justify-content: center; */
+  margin: 0 auto;
   font-size: 26px;
   font-weight: bold;
   color: var(--maindarkgray);
   background-color: white;
   height: 400px;
-  width: 600px;
+  max-width: 800px;
   padding-left: 60px;
   padding-top: 20px;
   margin: 15px;
   box-shadow: 10px 10px 10px var(--mainlightgray);
 }
 
-/*contains the 'Your Secure Password' text and the dashed bordered box*/
-.display{
-  height: 100px;
-  width:350px;
-  text-align: center;
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  color:var(--maindarkgray);
-  font-size: 20px;
-  border-style: dashed;
-  border-width: 2px;
-  padding: 5px;
-  border-color: lightgray;
-}
-
 /*this is the 'Generate Password' button*/
 .button{
   font-size: 20px;
   color: white;
+  display:inline-block;
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
   background-color: rgb(180, 0, 0);
   border-radius: 35px;
   padding: 15px;
-  margin: 30px;
+  margin: 16px 16px 16px 20px;
   width: 250px;
+  cursor: pointer;
   transition: 0.25s;
 }
-
+/*button effects*/
 .button:hover{
   cursor: grab;
   box-shadow: 5px 5px 5px var(--mainlightgray);
@@ -70,3 +61,24 @@ main{
 .button:active{
   color:black;
 }
+/*contains the 'Your Secure Password' text and the dashed bordered box*/
+#password{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  display: block;
+  width: 80%;
+  padding-top: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 85px;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 2px dashed #c0c7cf;
+  border-radius: 6px;
+  resize: none;
+  overflow: hidden;
+  }
