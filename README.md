@@ -9,11 +9,6 @@ I contributed to this project to work within the parameters set by the instructo
 Open the index.html file and a new window should pop up
 
 ## Usage
-
-Provide instructions and examples for use. Include screenshots as needed.
-
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
-
   
   ![alt text](assets/images/screenshot.png)
 
