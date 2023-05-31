@@ -37,6 +37,14 @@ h1{
   margin: 15px;
   box-shadow: 10px 10px 10px var(--mainlightgray);
 }
+/* this doesn't work, idk why
+  .card::after {
+  content: " ";
+  display: block;
+  width: 100%;
+  background: #e7e9eb;
+  height: 2px;
+} */
 
 /*this is the 'Generate Password' button*/
 .button{
