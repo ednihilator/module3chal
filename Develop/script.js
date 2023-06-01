@@ -25,7 +25,7 @@ function generatePassword(){
   includeSChar=confirm("Would you like special characters?");
   includeNum=confirm("Would you like numbers?");
   includeLowerChar=confirm("Would you like lowercase letters?");
-
+//this for loop checks for character length, then based on user parameters of lowercase/uppercase letters, numbers, and special characters, adds them to an empty string
   for (var x=0; x<charNum;) {
     if (includeUpperChar&&x<charNum){
       newRandom();
@@ -69,6 +69,11 @@ function writePassword() {
   passwordText.value = password;
 
 }
+//this function resets the password so the user doesn't have to refresh the page to get a new pass
+function resetPass(){
+  password='';
+  console.log("password is "+ password +" after password reset");
+}
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+generateBtn.addEventListener("click", writePassword, resetPass);
