@@ -10,7 +10,7 @@ Open the index.html file and a new window should pop up
 
 ## Usage
   
-  ![alt text](assets/images/screenshot.png)
+  ![alt text](../assets/images/screenshot.png)
 
 Enter how many characters you want your password to be, 8-24 characters. Confirm yes or no for special characters, numbers, uppercase letters, and lowercase letters.
 
