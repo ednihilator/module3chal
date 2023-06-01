@@ -1,3 +1,4 @@
+// Assignment code here
 var charList='abcdefghijklmnopqrstuvwxyz';
 var numList=[0,1,2,3,4,5,6,7,8,9];
 var specList="!#$%&'()*+,-./:;<=>?@[\\]^_`{|}~"
@@ -18,7 +19,7 @@ function newRandom(){
   specialCharIndex = Math.floor(Math.random() * specList.length);
 }
 //this is the function that prompts users about their password length/character types, then returns a password
-function genPass(){
+function generatePassword(){
   charNum = prompt("How long do you want your password to be? 8-24 characters");
   includeUpperChar=confirm("Would you like uppercase letters?");
   includeSChar=confirm("Would you like special characters?");
@@ -49,20 +50,25 @@ function genPass(){
       x++;
      }
   }
-
-  var passwordText = document.querySelector("#password");
-  passwordText.value = "Your Secure Password is \n"+password;
   
   
-  console.log("password is "+ password);
+  
+  //console.log("password is "+ password);
+  return password;
 }
-//this function resets the password to an empty string so you can hit the 'generate button' repeatedly without adding to previous a previous password
-  function resetPass(){
-    password='';
-    console.log("password is "+ password +" after password reset");
-  }
-  
-  
 
 
+// Get references to the #generate element
+var generateBtn = document.querySelector("#generate");
 
+// Write password to the #password input
+function writePassword() {
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
+
+  passwordText.value = password;
+
+}
+
+// Add event listener to generate button
+generateBtn.addEventListener("click", writePassword);
