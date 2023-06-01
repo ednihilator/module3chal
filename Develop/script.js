@@ -67,13 +67,19 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
+//tried putting the resetPass function into here, but it doesn't work
+  password='';
+  console.log("password is "+ password +" after password reset");
+  return password;
 
 }
 //this function resets the password so the user doesn't have to refresh the page to get a new pass
+//couldn't get this part to work
 function resetPass(){
   password='';
   console.log("password is "+ password +" after password reset");
+  return password;
 }
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword, resetPass);
+generateBtn.addEventListener("click", writePassword);
